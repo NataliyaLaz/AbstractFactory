@@ -1,0 +1,13 @@
+//
+//  Chair.swift
+//  AbstractFactory
+//
+//  Created by Nataliya Lazouskaya on 18.10.22.
+//
+
+import Foundation
+
+protocol Chair {
+    var name: String { get }
+    var type: String { get }
+}

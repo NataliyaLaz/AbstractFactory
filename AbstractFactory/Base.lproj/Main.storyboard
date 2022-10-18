@@ -1,24 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AbstractFactory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="F09-Wz-S0l">
+                                <rect key="frame" x="100" y="147" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F09-Wz-S0l" secondAttribute="height" multiplier="1:1" id="wjl-cX-Kep"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bedroom" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-gu-nyo">
+                                <rect key="frame" x="100" y="412" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Xx-gu-nyo" secondAttribute="height" multiplier="1:1" id="to5-QS-Fnn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-Vg-11B" userLabel="kitchenButton">
+                                <rect key="frame" x="83.666666666666686" y="357" width="223" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Order furniture for kitchen"/>
+                                <connections>
+                                    <action selector="kitchenOrder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaW-11-BRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrk-Fv-5Qd" userLabel="bedroomButton">
+                                <rect key="frame" x="77" y="622" width="236" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Order furniture for bedroom"/>
+                                <connections>
+                                    <action selector="bedroomOrder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b27-Nk-Goo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F09-Wz-S0l" secondAttribute="trailing" constant="100" id="3he-ur-Ycw"/>
+                            <constraint firstItem="9Xx-gu-nyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Oc-mf-fRr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="9Xx-gu-nyo" secondAttribute="leading" constant="-100" id="6gh-60-DG1"/>
+                            <constraint firstItem="2hD-Vg-11B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="98O-b0-1iP"/>
+                            <constraint firstItem="2hD-Vg-11B" firstAttribute="top" secondItem="F09-Wz-S0l" secondAttribute="bottom" constant="20" id="Qdr-Oo-jZX"/>
+                            <constraint firstItem="9Xx-gu-nyo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-100" id="Qfl-xD-BJS"/>
+                            <constraint firstItem="9Xx-gu-nyo" firstAttribute="top" secondItem="2hD-Vg-11B" secondAttribute="bottom" constant="20" id="Tq8-wP-kAY"/>
+                            <constraint firstItem="F09-Wz-S0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V9N-wq-hwX"/>
+                            <constraint firstItem="F09-Wz-S0l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="cvz-V3-amx"/>
+                            <constraint firstItem="zrk-Fv-5Qd" firstAttribute="top" secondItem="9Xx-gu-nyo" secondAttribute="bottom" constant="20" id="gdP-Nd-lCp"/>
+                            <constraint firstItem="F09-Wz-S0l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hsI-kv-mUZ"/>
+                            <constraint firstItem="zrk-Fv-5Qd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWO-mq-MH8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-111" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bedroom" width="3593" height="2395"/>
+        <image name="kitchen" width="183" height="122"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
